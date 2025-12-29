@@ -91,15 +91,15 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
     androidTestImplementation("io.mockk:mockk-android:1.13.10")
 
-    // ▼ 追加: Hiltの依存関係
-    implementation("com.google.dagger:hilt-android:2.51.1") // Hilt本体
-    ksp("com.google.dagger:hilt-android-compiler:2.51.1")   // コンパイラ (KSP)
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0") // Compose用
+    // Hiltの依存関係
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    ksp("com.google.dagger:hilt-android-compiler:2.51.1")
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
-    // ▼ 追加: Jetpack Compose (重複していたBOMは削除し、足りないものだけ残します)
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0") // 2.7.0 -> 2.8.0 推奨
+    // Jetpack Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.0")
 
-    // ▼ 追加: Coroutines & Test (既存のまま)
+    // Coroutines & Test
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     testImplementation("com.google.truth:truth:1.4.2")
     testImplementation("io.mockk:mockk:1.13.10")
