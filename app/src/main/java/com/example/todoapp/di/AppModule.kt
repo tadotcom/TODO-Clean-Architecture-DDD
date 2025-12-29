@@ -18,7 +18,7 @@ object AppModule {
     fun provideTodoRepository(): TodoRepository {
         return TodoRepositoryImpl()
     }
-    
+
     @Provides
     @Singleton
     fun provideGetTodosUseCase(repository: TodoRepository): GetTodosUseCase {

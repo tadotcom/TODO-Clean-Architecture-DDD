@@ -3,13 +3,16 @@ package com.example.todoapp.presentation
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.todoapp.domain.usecase.GetTodosUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class TodoListViewModel(
+@HiltViewModel
+class TodoListViewModel @Inject constructor(
     private val getTodosUseCase: GetTodosUseCase
 ) : ViewModel() {
 
